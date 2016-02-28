@@ -15,6 +15,9 @@
 		A38211291C8308EA00F14747 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A38211271C8308EA00F14747 /* LaunchScreen.storyboard */; };
 		A38211341C8308EA00F14747 /* AppReviewTimesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A38211331C8308EA00F14747 /* AppReviewTimesTests.m */; };
 		A382113F1C8308EA00F14747 /* AppReviewTimesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A382113E1C8308EA00F14747 /* AppReviewTimesUITests.m */; };
+		A382114F1C830A3700F14747 /* iosWhiteFilled.png in Resources */ = {isa = PBXBuildFile; fileRef = A382114E1C830A3700F14747 /* iosWhiteFilled.png */; };
+		A38211511C830AC800F14747 /* MacWhiteFilled.png in Resources */ = {isa = PBXBuildFile; fileRef = A38211501C830AC800F14747 /* MacWhiteFilled.png */; };
+		A38211561C8311A000F14747 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A38211551C8311A000F14747 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,10 @@
 		A382113A1C8308EA00F14747 /* AppReviewTimesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppReviewTimesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A382113E1C8308EA00F14747 /* AppReviewTimesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppReviewTimesUITests.m; sourceTree = "<group>"; };
 		A38211401C8308EA00F14747 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A382114E1C830A3700F14747 /* iosWhiteFilled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iosWhiteFilled.png; sourceTree = "<group>"; };
+		A38211501C830AC800F14747 /* MacWhiteFilled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MacWhiteFilled.png; sourceTree = "<group>"; };
+		A38211541C8311A000F14747 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		A38211551C8311A000F14747 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +85,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A345ECE21C83183D0035E298 /* MainControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A382111F1C8308EA00F14747 /* ViewController.h */,
+				A38211201C8308EA00F14747 /* ViewController.m */,
+			);
+			name = MainControllers;
+			sourceTree = "<group>";
+		};
+		A345ECE31C8318500035E298 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A38211221C8308EA00F14747 /* Main.storyboard */,
+				A38211271C8308EA00F14747 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		A382110D1C8308EA00F14747 = {
 			isa = PBXGroup;
 			children = (
@@ -101,13 +126,10 @@
 		A38211181C8308EA00F14747 /* AppReviewTimes */ = {
 			isa = PBXGroup;
 			children = (
-				A382111C1C8308EA00F14747 /* AppDelegate.h */,
-				A382111D1C8308EA00F14747 /* AppDelegate.m */,
-				A382111F1C8308EA00F14747 /* ViewController.h */,
-				A38211201C8308EA00F14747 /* ViewController.m */,
-				A38211221C8308EA00F14747 /* Main.storyboard */,
+				A38211581C8311C800F14747 /* Libraries */,
+				A38211521C830FB000F14747 /* Controllers */,
+				A345ECE31C8318500035E298 /* Views */,
 				A38211251C8308EA00F14747 /* Assets.xcassets */,
-				A38211271C8308EA00F14747 /* LaunchScreen.storyboard */,
 				A382112A1C8308EA00F14747 /* Info.plist */,
 				A38211191C8308EA00F14747 /* Supporting Files */,
 			);
@@ -118,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				A382111A1C8308EA00F14747 /* main.m */,
+				A382114E1C830A3700F14747 /* iosWhiteFilled.png */,
+				A38211501C830AC800F14747 /* MacWhiteFilled.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +162,41 @@
 				A38211401C8308EA00F14747 /* Info.plist */,
 			);
 			path = AppReviewTimesUITests;
+			sourceTree = "<group>";
+		};
+		A38211521C830FB000F14747 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A38211531C830FBA00F14747 /* AppDelegate */,
+				A345ECE21C83183D0035E298 /* MainControllers */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A38211531C830FBA00F14747 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				A382111C1C8308EA00F14747 /* AppDelegate.h */,
+				A382111D1C8308EA00F14747 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		A38211571C8311AF00F14747 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				A38211541C8311A000F14747 /* Reachability.h */,
+				A38211551C8311A000F14747 /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		A38211581C8311C800F14747 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				A38211571C8311AF00F14747 /* Reachability */,
+			);
+			name = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +303,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A38211291C8308EA00F14747 /* LaunchScreen.storyboard in Resources */,
+				A38211511C830AC800F14747 /* MacWhiteFilled.png in Resources */,
+				A382114F1C830A3700F14747 /* iosWhiteFilled.png in Resources */,
 				A38211261C8308EA00F14747 /* Assets.xcassets in Resources */,
 				A38211241C8308EA00F14747 /* Main.storyboard in Resources */,
 			);
@@ -272,6 +333,7 @@
 			files = (
 				A38211211C8308EA00F14747 /* ViewController.m in Sources */,
 				A382111E1C8308EA00F14747 /* AppDelegate.m in Sources */,
+				A38211561C8311A000F14747 /* Reachability.m in Sources */,
 				A382111B1C8308EA00F14747 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +474,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AppReviewTimes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.shubhamsorte.AppReviewTimes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -423,6 +486,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AppReviewTimes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.shubhamsorte.AppReviewTimes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -496,6 +560,7 @@
 				A38211451C8308EA00F14747 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A38211461C8308EA00F14747 /* Build configuration list for PBXNativeTarget "AppReviewTimesTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +569,7 @@
 				A38211481C8308EA00F14747 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A38211491C8308EA00F14747 /* Build configuration list for PBXNativeTarget "AppReviewTimesUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +578,7 @@
 				A382114B1C8308EA00F14747 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
