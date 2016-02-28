@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iosWhiteFilled.png" translatesAutoresizingMaskIntoConstraints="NO" id="tR5-EY-lA9">
+                                <rect key="frame" x="15" y="2" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="JMd-yo-Ay5"/>
+                                    <constraint firstAttribute="height" constant="40" id="Za2-6w-SFz"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MacWhiteFilled.png" translatesAutoresizingMaskIntoConstraints="NO" id="amu-JM-rDA">
+                                <rect key="frame" x="179" y="4" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="8kZ-a9-2eA"/>
+                                    <constraint firstAttribute="height" constant="35" id="Kp4-sG-oTZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ days" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkx-pO-jBu">
+                                <rect key="frame" x="59" y="8" width="90" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="k5B-Bw-fEz"/>
+                                    <constraint firstAttribute="width" constant="90" id="wXF-Mz-hcu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qap-b9-pdx">
+                                <rect key="frame" x="159" y="5" width="3" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Xhk-59-eNI"/>
+                                    <constraint firstAttribute="width" constant="3" id="ct7-g6-67N"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ days" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pU-7V-j9M">
+                                <rect key="frame" x="226" y="8" width="90" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="ARs-bH-ZWc"/>
+                                    <constraint firstAttribute="width" constant="90" id="rzp-U3-wq6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="tR5-EY-lA9" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="A2F-u0-fwG"/>
+                            <constraint firstItem="Qap-b9-pdx" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="AbA-Ck-Dhe"/>
+                            <constraint firstItem="tkx-pO-jBu" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="U2F-E0-fU1"/>
+                            <constraint firstItem="Qap-b9-pdx" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="br6-kl-061"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0pU-7V-j9M" secondAttribute="trailing" constant="-12" id="lsw-Nb-52h"/>
+                            <constraint firstItem="0pU-7V-j9M" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="m1r-Ye-zbc"/>
+                            <constraint firstItem="tR5-EY-lA9" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" constant="-1" id="pTe-El-WT5"/>
+                            <constraint firstItem="Qap-b9-pdx" firstAttribute="leading" secondItem="tkx-pO-jBu" secondAttribute="trailing" constant="10" id="qvU-IZ-Zds"/>
+                            <constraint firstItem="amu-JM-rDA" firstAttribute="leading" secondItem="Qap-b9-pdx" secondAttribute="trailing" constant="17" id="tv4-BA-BCg"/>
+                            <constraint firstItem="amu-JM-rDA" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="y2h-kb-B69"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="44"/>
+                    <connections>
+                        <outlet property="iosReviewDaysLabel" destination="tkx-pO-jBu" id="0hg-RY-0RI"/>
+                        <outlet property="macReviewDaysLabel" destination="0pU-7V-j9M" id="p15-vD-O8I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MacWhiteFilled.png" width="104" height="104"/>
+        <image name="iosWhiteFilled.png" width="100" height="100"/>
+    </resources>
+</document>

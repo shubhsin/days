@@ -18,6 +18,12 @@
 		A382114F1C830A3700F14747 /* iosWhiteFilled.png in Resources */ = {isa = PBXBuildFile; fileRef = A382114E1C830A3700F14747 /* iosWhiteFilled.png */; };
 		A38211511C830AC800F14747 /* MacWhiteFilled.png in Resources */ = {isa = PBXBuildFile; fileRef = A38211501C830AC800F14747 /* MacWhiteFilled.png */; };
 		A38211561C8311A000F14747 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A38211551C8311A000F14747 /* Reachability.m */; };
+		A3B587B21C836FDD00A849BB /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B5879C1C836F2B00A849BB /* NotificationCenter.framework */; };
+		A3B587B61C836FDD00A849BB /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B587B51C836FDD00A849BB /* TodayViewController.m */; };
+		A3B587B91C836FDD00A849BB /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B587B71C836FDD00A849BB /* MainInterface.storyboard */; };
+		A3B587BD1C836FDD00A849BB /* daysToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A3B587B11C836FDD00A849BB /* daysToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A3B587C11C83734100A849BB /* iosWhiteFilled.png in Resources */ = {isa = PBXBuildFile; fileRef = A382114E1C830A3700F14747 /* iosWhiteFilled.png */; };
+		A3B587C21C83734500A849BB /* MacWhiteFilled.png in Resources */ = {isa = PBXBuildFile; fileRef = A38211501C830AC800F14747 /* MacWhiteFilled.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +41,28 @@
 			remoteGlobalIDString = A38211151C8308EA00F14747;
 			remoteInfo = AppReviewTimes;
 		};
+		A3B587BB1C836FDD00A849BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A382110E1C8308EA00F14747 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3B587B01C836FDD00A849BB;
+			remoteInfo = daysToday;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A3B587AC1C836F2B00A849BB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A3B587BD1C836FDD00A849BB /* daysToday.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A38211161C8308EA00F14747 /* AppReviewTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppReviewTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +85,12 @@
 		A38211501C830AC800F14747 /* MacWhiteFilled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MacWhiteFilled.png; sourceTree = "<group>"; };
 		A38211541C8311A000F14747 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		A38211551C8311A000F14747 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		A3B5879C1C836F2B00A849BB /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		A3B587B11C836FDD00A849BB /* daysToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = daysToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3B587B41C836FDD00A849BB /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		A3B587B51C836FDD00A849BB /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		A3B587B81C836FDD00A849BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		A3B587BA1C836FDD00A849BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +112,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3B587AE1C836FDD00A849BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3B587B21C836FDD00A849BB /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +150,8 @@
 				A38211181C8308EA00F14747 /* AppReviewTimes */,
 				A38211321C8308EA00F14747 /* AppReviewTimesTests */,
 				A382113D1C8308EA00F14747 /* AppReviewTimesUITests */,
+				A3B587B31C836FDD00A849BB /* daysToday */,
+				A3B5879B1C836F2B00A849BB /* Frameworks */,
 				A38211171C8308EA00F14747 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -119,6 +162,7 @@
 				A38211161C8308EA00F14747 /* AppReviewTimes.app */,
 				A382112F1C8308EA00F14747 /* AppReviewTimesTests.xctest */,
 				A382113A1C8308EA00F14747 /* AppReviewTimesUITests.xctest */,
+				A3B587B11C836FDD00A849BB /* daysToday.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,6 +243,25 @@
 			name = Libraries;
 			sourceTree = "<group>";
 		};
+		A3B5879B1C836F2B00A849BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3B5879C1C836F2B00A849BB /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3B587B31C836FDD00A849BB /* daysToday */ = {
+			isa = PBXGroup;
+			children = (
+				A3B587B41C836FDD00A849BB /* TodayViewController.h */,
+				A3B587B51C836FDD00A849BB /* TodayViewController.m */,
+				A3B587B71C836FDD00A849BB /* MainInterface.storyboard */,
+				A3B587BA1C836FDD00A849BB /* Info.plist */,
+			);
+			path = daysToday;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -209,10 +272,12 @@
 				A38211121C8308EA00F14747 /* Sources */,
 				A38211131C8308EA00F14747 /* Frameworks */,
 				A38211141C8308EA00F14747 /* Resources */,
+				A3B587AC1C836F2B00A849BB /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A3B587BC1C836FDD00A849BB /* PBXTargetDependency */,
 			);
 			name = AppReviewTimes;
 			productName = AppReviewTimes;
@@ -255,6 +320,23 @@
 			productReference = A382113A1C8308EA00F14747 /* AppReviewTimesUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		A3B587B01C836FDD00A849BB /* daysToday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3B587BE1C836FDD00A849BB /* Build configuration list for PBXNativeTarget "daysToday" */;
+			buildPhases = (
+				A3B587AD1C836FDD00A849BB /* Sources */,
+				A3B587AE1C836FDD00A849BB /* Frameworks */,
+				A3B587AF1C836FDD00A849BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = daysToday;
+			productName = daysToday;
+			productReference = A3B587B11C836FDD00A849BB /* daysToday.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -275,6 +357,9 @@
 						CreatedOnToolsVersion = 7.2;
 						TestTargetID = A38211151C8308EA00F14747;
 					};
+					A3B587B01C836FDD00A849BB = {
+						CreatedOnToolsVersion = 7.2;
+					};
 				};
 			};
 			buildConfigurationList = A38211111C8308EA00F14747 /* Build configuration list for PBXProject "AppReviewTimes" */;
@@ -293,6 +378,7 @@
 				A38211151C8308EA00F14747 /* AppReviewTimes */,
 				A382112E1C8308EA00F14747 /* AppReviewTimesTests */,
 				A38211391C8308EA00F14747 /* AppReviewTimesUITests */,
+				A3B587B01C836FDD00A849BB /* daysToday */,
 			);
 		};
 /* End PBXProject section */
@@ -321,6 +407,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3B587AF1C836FDD00A849BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3B587C21C83734500A849BB /* MacWhiteFilled.png in Resources */,
+				A3B587B91C836FDD00A849BB /* MainInterface.storyboard in Resources */,
+				A3B587C11C83734100A849BB /* iosWhiteFilled.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +450,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A3B587AD1C836FDD00A849BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3B587B61C836FDD00A849BB /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -366,6 +470,11 @@
 			isa = PBXTargetDependency;
 			target = A38211151C8308EA00F14747 /* AppReviewTimes */;
 			targetProxy = A382113B1C8308EA00F14747 /* PBXContainerItemProxy */;
+		};
+		A3B587BC1C836FDD00A849BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A3B587B01C836FDD00A849BB /* daysToday */;
+			targetProxy = A3B587BB1C836FDD00A849BB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -384,6 +493,14 @@
 				A38211281C8308EA00F14747 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A3B587B71C836FDD00A849BB /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3B587B81C836FDD00A849BB /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -541,6 +658,28 @@
 			};
 			name = Release;
 		};
+		A3B587BF1C836FDD00A849BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = daysToday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.shubhamsorte.AppReviewTimes.daysToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A3B587C01C836FDD00A849BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = daysToday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.shubhamsorte.AppReviewTimes.daysToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -579,6 +718,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A3B587BE1C836FDD00A849BB /* Build configuration list for PBXNativeTarget "daysToday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3B587BF1C836FDD00A849BB /* Debug */,
+				A3B587C01C836FDD00A849BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
