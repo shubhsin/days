@@ -39,8 +39,7 @@
 
 - (UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)margins
 {
-    margins.bottom = 10.0;
-    return margins;
+    return UIEdgeInsetsMake(2, 40, 8, 40);
 }
 
 - (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult))completionHandler {

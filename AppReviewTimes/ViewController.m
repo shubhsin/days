@@ -13,6 +13,7 @@
 
 @interface ViewController ()
 @property NSArray * resultsArray;
+@property (strong, nonatomic) UIView *gradientView;
 @end
 
 @implementation ViewController
@@ -20,6 +21,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+	
+		
+	CGRect barRect = CGRectMake(0.0f, 0.0f, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+	
+	self.gradientView = [[UIView alloc] initWithFrame:barRect];
+	
+	CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+	NSArray *colors = @[(id)[[UIColor colorWithRed:(51/255.f) green:(102/255.f) blue:(153/255.f) alpha:1] CGColor],
+						(id)[[UIColor colorWithRed:(0/255.f) green:(51/255.f) blue:(102/255.f) alpha:1] CGColor]];
+	[gradientLayer setColors:colors];
+	[gradientLayer setFrame:[self.gradientView frame]];
+	
+	[[self.gradientView layer] addSublayer:gradientLayer];
+	[self.view insertSubview:self.gradientView atIndex:0];
+	
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -58,29 +74,29 @@
                                 NSURLResponse *response,
                                 NSError *error) {
                 @try {
-                if (data) {
-                    NSLog(@"DATA IS %@",[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil]);
-                    _resultsArray = [[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil] objectForKey:@"results"];
-                }
+					if (data) {
+						NSLog(@"DATA IS %@",[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil]);
+						_resultsArray = [[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil] objectForKey:@"results"];
+					}
                 }
                 @catch (NSException *exception){
                     
                 }
                 @finally {
                     dispatch_async(dispatch_get_main_queue(), ^{
-                [_iosStoreActivityIndicator stopAnimating];
-                [_macStoreActivityIndicator stopAnimating];
-                [_iosStoreActivityIndicator removeFromSuperview];
-                [_macStoreActivityIndicator removeFromSuperview];
-                        _iosStoreMainLabel.text = [[_resultsArray objectAtIndex:0] objectForKey:@"data"];
-                        _macStoreMainLabel.text = [[_resultsArray objectAtIndex:1] objectForKey:@"data"];
-                        _iosReviewDaysLabel.text = [[_resultsArray objectAtIndex:0] objectForKey:@"data_time/_text"];
-                        _macReviewDaysLabel.text = [[_resultsArray objectAtIndex:1] objectForKey:@"data_time/_text"];
-                        _iosReviewDaysLabel.alpha = 1;
-                        _macReviewDaysLabel.alpha = 1;
-                    });
+						[_iosStoreActivityIndicator stopAnimating];
+						[_macStoreActivityIndicator stopAnimating];
+						[_iosStoreActivityIndicator removeFromSuperview];
+						[_macStoreActivityIndicator removeFromSuperview];
+						_iosStoreMainLabel.text = [[_resultsArray objectAtIndex:0] objectForKey:@"data"];
+						_macStoreMainLabel.text = [[_resultsArray objectAtIndex:1] objectForKey:@"data"];
+						_iosReviewDaysLabel.text = [[_resultsArray objectAtIndex:0] objectForKey:@"data_time/_text"];
+						_macReviewDaysLabel.text = [[_resultsArray objectAtIndex:1] objectForKey:@"data_time/_text"];
+						_iosReviewDaysLabel.alpha = 1;
+						_macReviewDaysLabel.alpha = 1;
+					});
                 }
-            }] resume];
+	}] resume];
 }
 
 #pragma mark - Helper Methods
