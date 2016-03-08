@@ -1,7 +1,7 @@
 # days
 Gives the iOS and Mac App Store review Times in an app
 
-Why does it exists
+Why does it exist
 ==
 
 There is a website [appreviewtimes](http://appreviewtimes.com) which gives you an approximate day count of current App Store Review Trends by crowdsoursing the data.
