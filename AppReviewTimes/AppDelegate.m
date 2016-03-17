@@ -21,7 +21,7 @@
     
     // force touch stuff
     
-    UIMutableApplicationShortcutItem *shortcutToMain = [[UIMutableApplicationShortcutItem alloc] initWithType:@"com.da.appreviewtimes" localizedTitle:@"Check"];
+    UIMutableApplicationShortcutItem *shortcutToMain = [[UIMutableApplicationShortcutItem alloc] initWithType:@"com.da.appreviewtimes" localizedTitle:@"Look It Up"];
     [application setShortcutItems:@[shortcutToMain]];
     
     return YES;
