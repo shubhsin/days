@@ -15,8 +15,15 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     // Override point for customization after application launch.
+    
+    // force touch stuff
+    
+    UIMutableApplicationShortcutItem *shortcutToMain = [[UIMutableApplicationShortcutItem alloc] initWithType:@"com.da.appreviewtimes" localizedTitle:@"Check"];
+    [application setShortcutItems:@[shortcutToMain]];
+    
     return YES;
 }
 
@@ -40,6 +47,18 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+# pragma mark - Handling force touch shortcuts
+
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler
+{
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    
+    UIViewController *mainVC = [storyboard instantiateViewControllerWithIdentifier:@"mainVC"];
+        
+    self.window.rootViewController = mainVC;
 }
 
 @end
